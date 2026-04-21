@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phage & Microbiome Lab</title>
+
+<!-- Google字体（高级感关键） -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #111;
+    background: #ffffff;
+}
+
+/* ---------- 导航 ---------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #111;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    padding: 120px 60px;
+    max-width: 900px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* ---------- Section ---------- */
+.section {
+    padding: 80px 60px;
+    border-top: 1px solid #eee;
+}
+
+.section h2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+/* ---------- Grid ---------- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* ---------- 卡片 ---------- */
+.card {
+    border: 1px solid #eee;
+    padding: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* ---------- Publication ---------- */
+.pub {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    padding: 40px 60px;
+    border-top: 1px solid #eee;
+    font-size: 13px;
+    color: #666;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 导航 -->
+<div class="navbar">
+    <div><strong>Phage Lab</strong></div>
+    <div>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#people">People</a>
+        <a href="#publications">Publications</a>
+    </div>
+</div>
+
+<!-- 首页 -->
+<div class="hero">
+    <h1>
+        Understanding phage–host interactions<br>
+        and microbial evolution
+    </h1>
+    <p>
+        We integrate genomics, machine learning, and experimental biology 
+        to study bacteriophage dynamics and host specificity.
+    </p>
+</div>
+
+<!-- About -->
+<div class="section" id="about">
+    <h2>About</h2>
+    <p>
+        Our lab focuses on the interaction between bacteriophages and 
+        Enterococcus faecium, with an emphasis on host specificity, 
+        evolutionary dynamics, and phage therapy applications.
+    </p>
+</div>
+
+<!-- Research -->
+<div class="section" id="research">
+    <h2>Research</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Phage–host specificity</h3>
+            <p>Mechanisms underlying receptor recognition and infection.</p>
+        </div>
+        <div class="card">
+            <h3>Microbial evolution</h3>
+            <p>Adaptive evolution and horizontal gene transfer.</p>
+        </div>
+        <div class="card">
+            <h3>Machine learning</h3>
+            <p>Predicting host range using protein language models.</p>
+        </div>
+    </div>
+</div>
+
+<!-- People -->
+<div class="section" id="people">
+    <h2>People</h2>
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200">
+            <strong>Dr. XXX</strong>
+            <p>Principal Investigator</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200">
+            <strong>Student A</strong>
+            <p>PhD Student</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200">
+            <strong>Student B</strong>
+            <p>Master Student</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- Publications -->
+<div class="section" id="publications">
+    <h2>Publications</h2>
+
+    <div class="pub">
+        Author et al. (2024). Phage-host interaction study. <i>Nature Microbiology</i>.
+    </div>
+
+    <div class="pub">
+        Author et al. (2023). Microbial evolution analysis. <i>ISME Journal</i>.
+    </div>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    © 2026 Phage Lab · University · Contact: lab@email.com
+</div>
+
+</body>
+</html>
