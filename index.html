@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Phage & Microbiome Lab</title>
 
-<!-- Google字体（高级感关键） -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
@@ -31,8 +30,52 @@ body {
     font-size: 14px;
 }
 
-/* ---------- Hero ---------- */
+/* ---------- HERO 包装 ---------- */
+.hero-wrapper {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+}
+
+/* ---------- 噬菌体动画背景 ---------- */
+.phage-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+/* 噬菌体粒子 */
+.phage {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background: radial-gradient(circle at 30% 30%, #4f8cff, #111);
+    border-radius: 50%;
+    opacity: 0.12;
+    animation: float 18s infinite linear;
+}
+
+/* 分布位置 */
+.phage:nth-child(1) { top: 15%; left: 10%; animation-duration: 20s; }
+.phage:nth-child(2) { top: 35%; left: 75%; animation-duration: 25s; }
+.phage:nth-child(3) { top: 55%; left: 30%; animation-duration: 18s; }
+.phage:nth-child(4) { top: 25%; left: 85%; animation-duration: 22s; }
+.phage:nth-child(5) { top: 70%; left: 50%; animation-duration: 24s; }
+
+/* 漂浮动画 */
+@keyframes float {
+    0% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-40px) scale(1.1); }
+    100% { transform: translateY(0px) scale(1); }
+}
+
+/* ---------- HERO 内容 ---------- */
 .hero {
+    position: relative;
+    z-index: 2;
     padding: 120px 60px;
     max-width: 900px;
 }
@@ -109,16 +152,28 @@ body {
     </div>
 </div>
 
-<!-- 首页 -->
-<div class="hero">
-    <h1>
-        Understanding phage–host interactions<br>
-        and microbial evolution
-    </h1>
-    <p>
-        We integrate genomics, machine learning, and experimental biology 
-        to study bacteriophage dynamics and host specificity.
-    </p>
+<!-- 🌟 HERO（噬菌体动画封面） -->
+<div class="hero-wrapper">
+
+    <div class="phage-bg">
+        <div class="phage"></div>
+        <div class="phage"></div>
+        <div class="phage"></div>
+        <div class="phage"></div>
+        <div class="phage"></div>
+    </div>
+
+    <div class="hero">
+        <h1>
+            Understanding phage–host interactions<br>
+            and microbial evolution
+        </h1>
+        <p>
+            We integrate genomics, machine learning, and experimental biology 
+            to study bacteriophage dynamics and host specificity.
+        </p>
+    </div>
+
 </div>
 
 <!-- About -->
