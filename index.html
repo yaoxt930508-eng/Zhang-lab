@@ -1,254 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Phage & Microbiome Lab</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
-body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    color: #111;
-    background: #ffffff;
-}
-
-/* ---------- 导航 ---------- */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 60px;
-    border-bottom: 1px solid #eee;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #111;
-    margin-left: 20px;
-    font-size: 14px;
-}
-
-/* ---------- HERO 包装 ---------- */
-.hero-wrapper {
-    position: relative;
-    overflow: hidden;
-    background: #fff;
-}
-
-/* ---------- 噬菌体动画背景 ---------- */
-.phage-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-}
-
-/* 噬菌体粒子 */
-.phage {
-    position: absolute;
-    width: 45px;
-    height: 45px;
-    background: radial-gradient(circle at 30% 30%, #4f8cff, #111);
-    border-radius: 50%;
-    opacity: 0.12;
-    animation: float 18s infinite linear;
-}
-
-/* 分布位置 */
-.phage:nth-child(1) { top: 15%; left: 10%; animation-duration: 20s; }
-.phage:nth-child(2) { top: 35%; left: 75%; animation-duration: 25s; }
-.phage:nth-child(3) { top: 55%; left: 30%; animation-duration: 18s; }
-.phage:nth-child(4) { top: 25%; left: 85%; animation-duration: 22s; }
-.phage:nth-child(5) { top: 70%; left: 50%; animation-duration: 24s; }
-
-/* 漂浮动画 */
-@keyframes float {
-    0% { transform: translateY(0px) scale(1); }
-    50% { transform: translateY(-40px) scale(1.1); }
-    100% { transform: translateY(0px) scale(1); }
-}
-
-/* ---------- HERO 内容 ---------- */
-.hero {
-    position: relative;
-    z-index: 2;
-    padding: 120px 60px;
-    max-width: 900px;
-}
-
-.hero h1 {
-    font-size: 48px;
-    font-weight: 600;
-    line-height: 1.2;
-}
-
-.hero p {
-    font-size: 18px;
-    color: #555;
-    margin-top: 20px;
-}
-
-/* ---------- Section ---------- */
-.section {
-    padding: 80px 60px;
-    border-top: 1px solid #eee;
-}
-
-.section h2 {
-    font-size: 22px;
-    margin-bottom: 30px;
-}
-
-/* ---------- Grid ---------- */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-/* ---------- 卡片 ---------- */
-.card {
-    border: 1px solid #eee;
-    padding: 20px;
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
-/* ---------- Publication ---------- */
-.pub {
-    margin-bottom: 15px;
-    font-size: 14px;
-}
-
-/* ---------- Footer ---------- */
-.footer {
-    padding: 40px 60px;
-    border-top: 1px solid #eee;
-    font-size: 13px;
-    color: #666;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phage Systems Biology Laboratory</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<!-- 导航 -->
-<div class="navbar">
-    <div><strong>Phage Lab</strong></div>
+<header class="site-header">
+  <div class="container nav-container">
+    <div class="logo">Phage Systems Biology Lab</div>
+
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#research">Research</a>
+      <a href="#figure">Figure</a>
+      <a href="#publications">Publications</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section id="home" class="hero">
+  <div class="container hero-grid">
     <div>
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#people">People</a>
-        <a href="#publications">Publications</a>
-    </div>
-</div>
-
-<!-- 🌟 HERO（噬菌体动画封面） -->
-<div class="hero-wrapper">
-
-    <div class="phage-bg">
-        <div class="phage"></div>
-        <div class="phage"></div>
-        <div class="phage"></div>
-        <div class="phage"></div>
-        <div class="phage"></div>
+      <p class="eyebrow">Phage biology · Antimicrobial resistance · Systems microbiology</p>
+      <h1>Designing precision phage cocktails through interaction-guided discovery</h1>
+      <p class="hero-text">
+        We investigate phage–bacteria interactions, host-range architecture,
+        co-infection compatibility, and rational phage cocktail design for
+        multidrug-resistant bacterial infections.
+      </p>
+      <a href="#figure" class="button">View research workflow</a>
     </div>
 
-    <div class="hero">
-        <h1>
-            Understanding phage–host interactions<br>
-            and microbial evolution
-        </h1>
+    <div class="hero-card">
+      <h3>Research focus</h3>
+      <ul>
+        <li>High-throughput phage–host screening</li>
+        <li>Lysis and co-infection interaction matrices</li>
+        <li>Computational cocktail optimization</li>
+        <li>Clinical strain validation</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="research" class="section">
+  <div class="container">
+    <p class="section-label">Research</p>
+    <h2>From interaction matrices to optimized phage therapeutics</h2>
+
+    <div class="research-grid">
+      <article class="research-card">
+        <span>01</span>
+        <h3>Phage–host interaction mapping</h3>
         <p>
-            We integrate genomics, machine learning, and experimental biology 
-            to study bacteriophage dynamics and host specificity.
+          We construct large-scale lysis matrices to quantify phage activity
+          across diverse bacterial strain collections.
         </p>
+      </article>
+
+      <article class="research-card">
+        <span>02</span>
+        <h3>Compatibility-aware cocktail design</h3>
+        <p>
+          Co-infection interaction data are used to exclude antagonistic phage
+          pairs and prioritize compatible combinations.
+        </p>
+      </article>
+
+      <article class="research-card">
+        <span>03</span>
+        <h3>Experimental validation</h3>
+        <p>
+          Optimized cocktails are tested against clinical isolates over extended
+          time courses to evaluate inhibition breadth and durability.
+        </p>
+      </article>
     </div>
+  </div>
+</section>
 
-</div>
+<section id="figure" class="section figure-section">
+  <div class="container">
+    <p class="section-label">Featured figure</p>
+    <h2>Matrix-guided workflow for phage cocktail optimization</h2>
 
-<!-- About -->
-<div class="section" id="about">
-    <h2>About</h2>
+    <div class="figure-card">
+      <img src="images/phage_workflow.png" alt="Workflow for phage cocktail design" />
+
+      <div class="figure-caption">
+        <strong>Figure.</strong>
+        Exhaustive generation of candidate phage cocktails from lysis and
+        co-infection interaction matrices. Antagonistic combinations are removed,
+        and remaining cocktails are ranked using coverage breadth, coverage
+        redundancy, and taxonomic diversity. Selected cocktails are validated
+        against an expanded panel of <em>Enterococcus faecium</em> strains.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="publications" class="section">
+  <div class="container">
+    <p class="section-label">Selected work</p>
+    <h2>Publications and preprints</h2>
+
+    <div class="publication-list">
+      <article class="publication">
+        <h3>Interaction-guided design of optimized phage cocktails</h3>
+        <p>
+          A multi-dimensional scoring framework integrating lysis breadth,
+          compatibility, redundancy, and diversity for rational cocktail selection.
+        </p>
+        <span>Manuscript in preparation</span>
+      </article>
+
+      <article class="publication">
+        <h3>Phage inhibition of clinical <em>E. faecium</em> isolates</h3>
+        <p>
+          Experimental validation of selected cocktails against 157 bacterial
+          strains over a 72-hour inhibition assay.
+        </p>
+        <span>Selected dataset</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="section team-section">
+  <div class="container">
+    <p class="section-label">People</p>
+    <h2>Team</h2>
+
+    <div class="team-grid">
+      <div class="team-member">
+        <div class="portrait"></div>
+        <h3>Principal Investigator</h3>
+        <p>Phage biology, infection biology, antimicrobial resistance.</p>
+      </div>
+
+      <div class="team-member">
+        <div class="portrait"></div>
+        <h3>Postdoctoral Researchers</h3>
+        <p>Systems microbiology, omics analysis, bacterial genetics.</p>
+      </div>
+
+      <div class="team-member">
+        <div class="portrait"></div>
+        <h3>Graduate Students</h3>
+        <p>Phage screening, host-range assays, computational analysis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <p class="section-label">Contact</p>
+    <h2>Join or collaborate with us</h2>
+
     <p>
-        Our lab focuses on the interaction between bacteriophages and 
-        Enterococcus faecium, with an emphasis on host specificity, 
-        evolutionary dynamics, and phage therapy applications.
+      We welcome students, clinicians, microbiologists, computational biologists,
+      and collaborators interested in phage therapy and antimicrobial resistance.
     </p>
-</div>
 
-<!-- Research -->
-<div class="section" id="research">
-    <h2>Research</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Phage–host specificity</h3>
-            <p>Mechanisms underlying receptor recognition and infection.</p>
-        </div>
-        <div class="card">
-            <h3>Microbial evolution</h3>
-            <p>Adaptive evolution and horizontal gene transfer.</p>
-        </div>
-        <div class="card">
-            <h3>Machine learning</h3>
-            <p>Predicting host range using protein language models.</p>
-        </div>
-    </div>
-</div>
+    <p class="contact-info">
+      Email: lab@example.edu<br />
+      Address: Your University, Your City, Country
+    </p>
+  </div>
+</section>
 
-<!-- People -->
-<div class="section" id="people">
-    <h2>People</h2>
-    <div class="grid">
+</main>
 
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200">
-            <strong>Dr. XXX</strong>
-            <p>Principal Investigator</p>
-        </div>
+<footer class="footer">
+  <div class="container">
+    © 2026 Phage Systems Biology Laboratory. All rights reserved.
+  </div>
+</footer>
 
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200">
-            <strong>Student A</strong>
-            <p>PhD Student</p>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200">
-            <strong>Student B</strong>
-            <p>Master Student</p>
-        </div>
-
-    </div>
-</div>
-
-<!-- Publications -->
-<div class="section" id="publications">
-    <h2>Publications</h2>
-
-    <div class="pub">
-        Author et al. (2024). Phage-host interaction study. <i>Nature Microbiology</i>.
-    </div>
-
-    <div class="pub">
-        Author et al. (2023). Microbial evolution analysis. <i>ISME Journal</i>.
-    </div>
-
-</div>
-
-<!-- Footer -->
-<div class="footer">
-    © 2026 Phage Lab · University · Contact: lab@email.com
-</div>
-
+<script src="script.js"></script>
 </body>
 </html>
